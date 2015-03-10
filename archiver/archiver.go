@@ -53,6 +53,7 @@ type Archiver struct {
 	republisher          *Republisher
 	incomingcounter      *counter
 	pendingwritescounter *counter
+	handlercounters      map[string]*counter
 	coalescer            *Coalescer
 	sshscs               *SSHConfigServer
 	enforceKeys          bool
