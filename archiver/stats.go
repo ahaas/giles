@@ -22,7 +22,7 @@ func (c *counter) Mark() {
 }
 
 func (c *counter) Reset() uint64 {
-	var returncount = c.Count
+	uint64 returncount = atomic.LoadUint64(&c.Count)
 	atomic.StoreUint64(&c.Count, 0)
 	c.Last = returncount
 	return returncount

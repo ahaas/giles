@@ -36,7 +36,6 @@ var curSystemStats atomic.Value
 // collectSystemStats() will keep curSystemStats updated with stats
 // about the local system. It uses atomic operations when updating
 // curSystemStats.
-// TODO: Move systemStats stuff to another file.
 func collectSystemStats() {
 	for {
 		bootTime, _ := host.BootTime()
